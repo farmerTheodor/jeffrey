@@ -1,0 +1,7 @@
+pip install --upgrade google-cloud-speech
+export GOOGLE_APPLICATION_CREDENTIALS="/home/ddeen/Documents/jeffrey/Jeffrey-937cc9806651.json"
+sudo apt-get install python-pygame
+pip install pygame
+pip install pyaudio
+
+
