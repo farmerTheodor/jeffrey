@@ -1,1 +1,4 @@
 Jeffrey-937cc9806651.json
+*.raw
+*.mp3
+./__pycache__
