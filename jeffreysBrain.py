@@ -23,11 +23,14 @@ def awakeTheBeast():
 		spokenWords = spokenWords + " " + result.alternatives[0].transcript
 	if "Jeffrey" in spokenWords or "comment me" in spokenWords:
 		comments = []
-		if(random.randint(0,1)):
+		compliment = random.randint(0,1)
+		if(compliment):
 			comments = loadFileReturnLineArray("jeffreysCommentsGood.txt")
 		else:
 			comments = loadFileReturnLineArray("jeffreysCommentsBad.txt")
 		comment = selectComment(comments)
+		if (compliment and random.random() > 0.8):
+			comment = comment + ". Oh. I thought you were someone else. Nevermind."
 		hisGloriousVoice = Voice(1)
 		hisGloriousVoice.translateFromBrain(comment)
 		hisGloriousVoice.speakToWorld()
